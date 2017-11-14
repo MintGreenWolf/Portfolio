@@ -1,3 +1,156 @@
 <html>
-"Hello World!"
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet" type="text/css"> 
+    <link rel="stylesheet" href="animate.css">
+    
+ <script>
+     var my_image = new Image();
+     var my_image2 = new Image();
+     var my_image3 = new Image();
+     
+     my_image3.src = "https://github.com/MintGreenWolf/Photos/blob/master/KingLogoFlinch.png?raw=true";
+     my_image2.src = 'https://github.com/MintGreenWolf/Photos/blob/master/KingLogoTie.png?raw=true';
+     
+     my_image.src = 'https://github.com/MintGreenWolf/Photos/blob/master/KingLogoSurprised.png?raw=true';
+     
+  function w(){
+      console.log("!!!")
+        
+        
+    };
+     
+    function face(){
+        document.getElementById("NODE").innerHTML =
+        "<img src =" + my_image.src+" style = 'width: 200px; height: 250px;'>" 
+        };  
+     function face1(){
+         document.getElementById("NODE").innerHTML = "<img src = 'https://github.com/MintGreenWolf/Photos/blob/master/KingLogo.png?raw=true' style = 'width: 200px; hiegth: 250px;'>"
+     };
+     
+     function face2(){
+         console.log("AAAAA");
+         document.getElementById("NODE").innerHTML = 
+         "<img src =" + my_image2.src+" style = 'width: 200px; height: 250px;'>" 
+         console.log("what?");
+         
+     };
+     
+     function flinch(){
+         document.getElementById("NODE").innerHTML = "<img src =" + my_image3.src+" style = 'width: 200px; height: 250px;'>" 
+         document.getElementById("NODE").style.animationName= "example";
+         document.getElementById("NODE").style.animationDuration= "0.5s";
+         setTimeout( function(){document.getElementById("NODE").style.animationName= ""; face1()}, 1000);
+         document.getElementById("NODE").style.animationName= "example";
+         
+        
+        
+        
+         
+
+         };
+     
+    
+    </script>    
+</head>
+    <style>
+    
+        .container{
+           
+            height: 100%vh;
+            width: 100%vw;
+            z-index: -10;
+            ?background-image: url("/o-CL5-900.jpg");*/;
+            background-repeat: no-repeat;
+        }
+        .centerdiv{
+            background-color: ;
+            position: absolute;
+            height: 400px;
+            width:  500px;;
+            z-index: 1;
+            top: 50%;
+            left: 50%;
+            margin: -200px 0 0 -250px;
+            
+            
+        }
+        .svgdiv{
+            
+            position: inherit;
+            height: 250px;
+            width: 200px;
+            float: left; 
+            z-index: 10; 
+            font-family: Oleo Script; 
+            background-color: background-color: rgba(255,255,255,0)
+            font-size: 50px;
+            z-index: 1;
+            box-shadow: 10px 10px 10px #D3D3D3;
+            margin-left: 150px;
+            
+        }
+        
+        .sigdiv{
+           
+            font-family:  "Oleo Script";
+            margin-left: 20%;
+            margin-top: 55%; 
+            font-size: 55px;
+            text-shadow: 10px 10px 10px #D3D3D3;
+            
+            
+        
+            
+        }
+        
+        .CircleContainer{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background: steelblue;
+            border-radius: 50px;
+            z-index: 25;
+            overflow: hidden;
+            float: left;
+            margin-left: 50px;
+            Line-height: 98px;
+            font-size: 25px;
+            float: left;
+            text-align: center;
+            color: Powderblue;
+            background-size: 100px 100px;
+        }
+        
+        @keyframes example {
+        from { transform: rotate(7deg)}
+        to {transform: rotate(-7deg)}
+
+        
+        
+    
+    
+    </style>
+       
+    <body class="container">
+        <div class= "centerdiv"><div class= "svgdiv" id = "NODE" onclick="flinch()">
+            <img src = "https://github.com/MintGreenWolf/Photos/blob/master/KingLogo.png?raw=true" style = "width: 200px; hiegth: 250px;">
+            
+        </div>
+        
+    
+            <div class = "sigdiv" > Kingsley Abel</br>
+        </div>
+     
+        <div class = "CircleContainer" onmouseover="face()" onmouseout="face1()" style= "background-image: URL(https://github.com/MintGreenWolf/Photos/blob/master/KingHorse.jpg?raw=true)"  >
+          
+            Bio
+        </div>
+       <a href = "https://github.com/MintGreenWolf/Photos/blob/master/Kingsley_Resume.pdf"><div class = "Circlecontainer" onmouseover="face2()" onmouseout="face1()" style = "float: left; text-align: center;   background-image: URL(http://editmyresume.org/wp-content/uploads/2016/07/resume-think-stock-photopng-d2949738c0da4a9f.png); " >
+           Resume
+           </div></a>
+        
+        <div class = "Circlecontainer" onmouseover = "face()" onmouseout= "face1()" style = "float: left; text-align: center; Line-height: 98px; font-size: 25px; background-image:URL(http://as2.ftcdn.net/jpg/01/25/55/11/1024W_F_125551161_gL5ypANJFCHUzBUVFu3p7Arcu9aiBplh_NW1.jpg); ">
+            Work
+        </div>
+    </body>
 </html>
