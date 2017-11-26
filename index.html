@@ -46,13 +46,31 @@
         
         
          
-
          };
      
     
     </script>    
 </head>
     <style>
+           @media(max-width: 496px){
+            .CircleContainer{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background: steelblue;
+            border-radius: 50px;
+            z-index: 25;
+            overflow: hidden;
+           
+            margin-left: 50px;
+            Line-height: 98px;
+            font-size: 25px;
+         
+            text-align: center;
+            color: Powderblue;
+            background-size: 100px 100px;
+        }
+        };
     
         .container{
            
@@ -102,7 +120,23 @@
         
             
         }
-        
+           .CircleContainer{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background: steelblue;
+            border-radius: 50px;
+            z-index: 25;
+            overflow: hidden;
+            float: left;
+            margin-left: 50px;
+            Line-height: 98px;
+            font-size: 25px;
+            text-align: center;
+            color: Powderblue;
+            background-size: 100px 100px;
+        }
+       
         .CircleContainer{
             position: relative;
             width: 100px;
@@ -115,16 +149,38 @@
             margin-left: 50px;
             Line-height: 98px;
             font-size: 25px;
-            float: left;
             text-align: center;
             color: Powderblue;
             background-size: 100px 100px;
         }
+         @media screen and (max-width: 700px){
+            .CircleContainer{
+            position: relative;
+                display: block !important;
+            width: 300px !important;
+            height: 100px !important;
+            border-radius: 25px ;
+            z-index: 25;
+            overflow: hidden !important;
+            margin-left: 50px ;
+            font-size: 25px ;
+                float: none ;
+            text-align: center ;
+            color: purple;
+            background-size: 100px 100px !important;
+                background-repeat: no-repeat;
+                background-position: center;
+            margin: 0 auto !important;
+                margin-top: 15px !important;
+        }
+        };
+        
         
         @keyframes example {
         from { transform: rotate(7deg)}
-        to {transform: rotate(-7deg)}
-
+        to {transform: rotate(-7deg)};
+        
+            
         
         
     
@@ -145,11 +201,11 @@
           
             Bio
           </div></a>
-       <a href = "https://github.com/MintGreenWolf/Photos/blob/master/Kingsley_Resume.pdf"><div class = "Circlecontainer" onmouseover="face2()" onmouseout="face1()" style = "float: left; text-align: center;   background-image: URL(http://editmyresume.org/wp-content/uploads/2016/07/resume-think-stock-photopng-d2949738c0da4a9f.png); " >
+       <a href = "https://github.com/MintGreenWolf/Photos/blob/master/Kingsley_Resume.pdf"><div class = "Circlecontainer" onmouseover="face2()" onmouseout="face1()" style = "   background-image: URL(http://editmyresume.org/wp-content/uploads/2016/07/resume-think-stock-photopng-d2949738c0da4a9f.png); " >
            Resume
            </div></a>
         
-       <a href = "https://mintgreenwolf.github.io/Portfolio/work"><div class = "Circlecontainer" onmouseover = "face()" onmouseout= "face1()" style = "float: left; text-align: center; Line-height: 98px; font-size: 25px; background-image:URL(http://as2.ftcdn.net/jpg/01/25/55/11/1024W_F_125551161_gL5ypANJFCHUzBUVFu3p7Arcu9aiBplh_NW1.jpg); ">
+       <a href = "https://mintgreenwolf.github.io/Portfolio/work"><div class = "Circlecontainer" onmouseover = "face()" onmouseout= "face1()" style = "; background-image:URL(http://as2.ftcdn.net/jpg/01/25/55/11/1024W_F_125551161_gL5ypANJFCHUzBUVFu3p7Arcu9aiBplh_NW1.jpg); ">
             Work
          </div></a>
     </body>
