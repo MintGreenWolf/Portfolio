@@ -52,6 +52,10 @@
     </script>    
 </head>
     <style>
+            @keyframes example {
+        from { transform: rotate(7deg)}
+        to {transform: rotate(-7deg)};
+        };
            @media(max-width: 496px){
             .CircleContainer{
             position: relative;
@@ -120,22 +124,7 @@
         
             
         }
-           .CircleContainer{
-            position: relative;
-            width: 100px;
-            height: 100px;
-            background: steelblue;
-            border-radius: 50px;
-            z-index: 25;
-            overflow: hidden;
-            float: left;
-            margin-left: 50px;
-            Line-height: 98px;
-            font-size: 25px;
-            text-align: center;
-            color: Powderblue;
-            background-size: 100px 100px;
-        }
+    
        
         .CircleContainer{
             position: relative;
@@ -152,8 +141,11 @@
             text-align: center;
             color: Powderblue;
             background-size: 100px 100px;
+            
         }
-         @media screen and (max-width: 700px){
+        
+       
+         @media screen and (max-width: 768px){
             .CircleContainer{
             position: relative;
                 display: block !important;
@@ -173,12 +165,42 @@
             margin: 0 auto !important;
                 margin-top: 15px !important;
         }
-        };
-        
-        
-        @keyframes example {
+             
+              @keyframes example {
         from { transform: rotate(7deg)}
         to {transform: rotate(-7deg)};
+        };
+
+        };
+        
+           .CircleContainer{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background: steelblue;
+            border-radius: 50px;
+            z-index: 25;
+            overflow: hidden;
+            float: left;
+            margin-left: 50px;
+            Line-height: 98px;
+            font-size: 25px;
+            text-align: center;
+            color: Powderblue;
+            background-size: 100px 100px;
+            
+        }
+        
+         @media screen and (min-width: 1000px){
+            .CircleContainer{
+                color: deeppink;
+            }
+             
+              
+              
+              
+              
+        };
         
             
         
@@ -194,8 +216,9 @@
         </div>
         
     
-            <div class = "sigdiv" > Kingsley Abel</br>
+            <div class = "sigdiv" > Kingsley Abel <br>
         </div>
+       
      
         <a href = "https://mintgreenwolf.github.io/Portfolio/Bio.html"><div class = "CircleContainer" onmouseover="face()" onmouseout="face1()" style= "background-image: URL(https://github.com/MintGreenWolf/Photos/blob/master/KingHorse.jpg?raw=true)"  >
           
@@ -208,5 +231,6 @@
        <a href = "https://mintgreenwolf.github.io/Portfolio/work"><div class = "Circlecontainer" onmouseover = "face()" onmouseout= "face1()" style = "; background-image:URL(http://as2.ftcdn.net/jpg/01/25/55/11/1024W_F_125551161_gL5ypANJFCHUzBUVFu3p7Arcu9aiBplh_NW1.jpg); ">
             Work
          </div></a>
-    </body>
-</html>
+        </div>
+            </body>
+        </html>
