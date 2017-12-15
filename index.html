@@ -1,9 +1,9 @@
 <html>
 <head>
   <link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet" type="text/css"> 
-    <link rel="stylesheet" href="animate.css">
     
  <script>
+     var x = 0;
      var my_image = new Image();
      var my_image2 = new Image();
      var my_image3 = new Image();
@@ -36,11 +36,69 @@
      };
      
      function flinch(){
+        var v = document.getElementById("1");
+        var t = document.getElementById("2");
+        var r = document.getElementById("3");
+         if(x==0){
+             x =1;
+             console.log("bbbbbb");
+             v.style.visibility = "visible";
+             console.log(v);
+             v.style.animationName = "bounce";
+             v.style.animationDuration = "0.3s";
+             v.style.zIndex = "-23";
+             v.style.animationFillMode= "forwards";
+             
+             /*second circle*/
+             
+            t.style.visibility = "visible";
+             console.log(t);
+             t.style.animationName = "bounce2";
+             t.style.animationDuration = "0.1s";
+             t.style.zIndex = "-23";
+             t.style.animationDelay = "0.1s"
+             t.style.animationFillMode= "forwards";
+             
+             /*Third circle*/
+             
+             r.style.visibility = "visible";
+             console.log(r);
+             r.style.animationName = "bounce3";
+             r.style.animationDuration = "0.1s";
+             r.style.zIndex = "-23";
+             r.style.animationDelay = "0.15s";
+             r.style.animationFillMode= "forwards";   
+         }
+         else if(x == 1){
+             x = 0;
+             v.style.visibility = "visible";
+             console.log(v);
+             v.style.animationName = "bounceback";
+             v.style.animationDuration = "0.3s";
+             v.style.zIndex = "-23";
+             v.style.animationFillMode= "forwards";  
+             
+               
+            t.style.visibility = "visible";
+             console.log(v);
+             t.style.animationName = "bounceback2";
+             t.style.animationDuration = "0.4s";
+             t.style.zIndex = "-23";
+             t.style.animationFillMode= "forwards";
+             
+             r.style.visibility = "visible";
+             console.log(v);
+             r.style.animationName = "bounceback3";
+             r.style.animationDuration = "0.5s";
+             r.style.zIndex = "-23";
+             r.style.animationFillMode= "forwards";
+         }
          document.getElementById("NODE").innerHTML = "<img src =" + my_image3.src+" style = 'width: 200px; height: 250px;'>" 
          document.getElementById("NODE").style.animationName= "example";
          document.getElementById("NODE").style.animationDuration= "0.5s";
          setTimeout( function(){document.getElementById("NODE").style.animationName= ""; face1()}, 1000);
          document.getElementById("NODE").style.animationName= "example";
+         console.log(document.getElementById("NODE")); 
          
         
         
@@ -52,10 +110,41 @@
     </script>    
 </head>
     <style>
-            @keyframes example {
+        @keyframes example {
         from { transform: rotate(7deg)}
         to {transform: rotate(-7deg)};
-        };
+        }
+         @keyframes bounce{
+            from {top: -250px;} 
+            to{top: 10px; right: 13px; }
+        }
+        
+        @keyframes bounce2{
+            from {top: -250px;}
+            to {top:10px}
+        }
+        
+        @keyframes bounce3 {
+            from {top: -250px}
+            to {top: 10px; left: 10px}
+        }
+        
+        @keyframes bounceback {
+            from{top: 10px; right: 13px;}
+            to{top: -250px;}
+        }
+        
+        @keyframes bounceback2{
+            from{top:10px}
+            to{top: -250px;}
+        }
+        
+        @keyframes bounceback3{
+            from{top: 10px; left: 0px}
+            to{top: -250px}
+        }
+        
+    
            @media(max-width: 496px){
             .CircleContainer{
             position: relative;
@@ -87,7 +176,7 @@
         .centerdiv{
             background-color: ;
             position: absolute;
-            height: 400px;
+            height: 800px;
             width:  500px;;
             z-index: 1;
             top: 50%;
@@ -109,6 +198,7 @@
             z-index: 1;
             box-shadow: 10px 10px 10px #D3D3D3;
             margin-left: 150px;
+            background-color: white;
             
         }
         
@@ -166,10 +256,7 @@
                 margin-top: 15px !important;
         }
              
-              @keyframes example {
-        from { transform: rotate(7deg)}
-        to {transform: rotate(-7deg)};
-        };
+         
 
         };
         
@@ -177,7 +264,6 @@
             position: relative;
             width: 100px;
             height: 100px;
-            background: steelblue;
             border-radius: 50px;
             z-index: 25;
             overflow: hidden;
@@ -217,20 +303,24 @@
         
     
             <div class = "sigdiv" > Kingsley Abel <br>
+                <div style = "font-size: 25px; margin-left: 35px; margin-top: -15px;">UI/UX Design Therapist</div>
         </div>
        
      
-        <a href = "https://mintgreenwolf.github.io/Portfolio/Bio.html"><div class = "CircleContainer" onmouseover="face()" onmouseout="face1()" style= "background-image: URL(https://github.com/MintGreenWolf/Photos/blob/master/KingHorse.jpg?raw=true)"  >
+        <a href = "https://mintgreenwolf.github.io/Portfolio/Bio.html"><div class = "CircleContainer" id = "1" onmouseover="face()" onmouseout="face1()" style= "background-image: URL(https://github.com/MintGreenWolf/Photos/blob/master/KingHorse.jpg?raw=true); top: -250px; right: -150px; visibility: hidden;"  >
           
             Bio
           </div></a>
-       <a href = "https://github.com/MintGreenWolf/Photos/blob/master/Kingsley_Resume.pdf"><div class = "Circlecontainer" onmouseover="face2()" onmouseout="face1()" style = "   background-image: URL(http://editmyresume.org/wp-content/uploads/2016/07/resume-think-stock-photopng-d2949738c0da4a9f.png); " >
+       <a href = "https://github.com/MintGreenWolf/Photos/blob/master/Kingsley_Resume.pdf"><div class = "Circlecontainer" onmouseover="face2()" onmouseout="face1()" id= "2" style = "   background-image: URL(http://editmyresume.org/wp-content/uploads/2016/07/resume-think-stock-photopng-d2949738c0da4a9f.png); top: -250px; visibility: hidden" >
            Resume
            </div></a>
         
-       <a href = "https://mintgreenwolf.github.io/Portfolio/work"><div class = "Circlecontainer" onmouseover = "face()" onmouseout= "face1()" style = "; background-image:URL(http://as2.ftcdn.net/jpg/01/25/55/11/1024W_F_125551161_gL5ypANJFCHUzBUVFu3p7Arcu9aiBplh_NW1.jpg); ">
-            Work
-         </div></a>
+            <a href = "https://mintgreenwolf.github.io/Portfolio/work"><div class = "Circlecontainer" onmouseover = "face()" id = "3" onmouseout= "face1()" style = " background-image:URL(http://as2.ftcdn.net/jpg/01/25/55/11/1024W_F_125551161_gL5ypANJFCHUzBUVFu3p7Arcu9aiBplh_NW1.jpg); margin-top: 0; top:-250px; left: -150px; visibility: hidden">Work</div>
+            
+        </a>
         </div>
             </body>
+    <footer>
+        contact: Abelk@uci.edu
+    </footer>
         </html>
